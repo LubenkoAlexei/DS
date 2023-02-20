@@ -1,7 +1,0 @@
-employees.bin
-Номер сотрудника, имя сотрудника, часы, зарплата
-1 Dmitriy 16 192
-2 Alexander 10 120
-3 Alexei 7 84
-4 Andrey 8 96
-8 Ivan 12 144
