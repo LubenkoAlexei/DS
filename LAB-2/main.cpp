@@ -20,7 +20,7 @@ struct forThreads{
 };
 void print(vector<int>& arr){
     for(e: arr)
-        cout<< e <<" ";
+        cout << e <<" ";
 }
 DWORD WINAPI MinMax(LPVOID param){
     forThreads*minMax=static_cast<forThreads*>(param);
@@ -34,7 +34,6 @@ DWORD WINAPI MinMax(LPVOID param){
             Sleep(TIME_FOR_SLEEP_FIRST);
             max=mas[i];
             imax=i;
-
         }
         if(mas[i]<min){
             Sleep(TIME_FOR_SLEEP_FIRST);
@@ -46,9 +45,7 @@ DWORD WINAPI MinMax(LPVOID param){
     minMax->min=min;
     minMax->indexMax=imax;
     minMax->indexMin=imin;
-    cout<<"Minimum is: "<<minMax->min<<endl;
-    cout<<"Maximum is: "<<minMax->max<<endl;
-    cout<<"Thread is finished"<<endl;
+    cout<<"Minimum is: "<<minMax->min<< endl <<"Maximum is: "<<minMax->max<<endl <<"Thread is finished"<<endl;
     return 0;
 }
 
@@ -61,8 +58,7 @@ DWORD WINAPI average(LPVOID param){
         Sleep(TIME_FOR_SLEEP_SECOND);
     }
     avArr->average=static_cast<double>(sum/mas.size());
-    cout<< "average is: "<< avArr->average<< endl;
-    cout<<"Thread is finished"<<endl;
+    cout<< "average is: "<< avArr->average<< endl <<"Thread is finished"<<endl;
     return 0;
 }
 
