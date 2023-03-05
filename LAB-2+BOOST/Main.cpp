@@ -45,7 +45,17 @@ void MinMax(forThreads* ft) {
 	cout << "Thread is finished" << endl;
 }
 
-
+void Average(forThreads* ft) {
+	boost::container::small_vector<int, sizeOfVector>arr = ft->arr;
+	double sum = 0.;
+	for (int i = 0; i < arr.size(); i++) {
+		sum += arr[i];
+		boost::this_thread::sleep(boost::posix_time::milliseconds(timeToSleep2));
+	}
+	ft->average = sum / arr.size();
+	cout << "average is: " << ft->average << endl;
+	cout << "Thread is finished" << endl;
+}
 
 int main() {
 	cout << "Input size of array: ";
